@@ -75,4 +75,6 @@ extern bool mono_cga;
 #include "logging.h"
 #endif // the logging system.
 
+const char *DOSBOX_GetVersion();
+
 #endif /* DOSBOX_DOSBOX_H */

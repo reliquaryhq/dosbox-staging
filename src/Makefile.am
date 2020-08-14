@@ -11,7 +11,11 @@ endif
 .rc.o:
 	$(WINDRES) -o $@ $<
 
-dosbox_SOURCES = dosbox.cpp $(ico_stuff)
+.PHONY: version.cpp
+version.cpp:
+	./../scripts/generate-version-cpp.sh > $@
+
+dosbox_SOURCES = dosbox.cpp $(ico_stuff) version.cpp
 dosbox_LDADD = cpu/libcpu.a \
                debug/libdebug.a \
                dos/libdos.a \

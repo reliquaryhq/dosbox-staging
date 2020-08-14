@@ -4,3 +4,4 @@ dosbox
 Makefile
 Makefile.in
 
+version.cpp

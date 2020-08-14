@@ -357,6 +357,7 @@ static void CleanupSDLResources();
 static void HandleVideoResize(int width, int height);
 
 static constexpr char version_msg[] = R"(dosbox (dosbox-staging), version %s
+
 Copyright (C) 2020 The dosbox-staging team.
 License GPLv2+: GNU GPL version 2 or later <https://www.gnu.org/licenses/gpl-2.0.html>
 
@@ -3167,7 +3168,7 @@ int main(int argc, char* argv[]) {
 
 		if (control->cmdline->FindExist("--version") ||
 		    control->cmdline->FindExist("-version")) {
-			printf(version_msg, VERSION);
+			printf(version_msg, DOSBOX_GetVersion());
 			return 0;
 		}
 
